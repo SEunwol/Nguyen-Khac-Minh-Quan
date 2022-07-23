@@ -195,6 +195,7 @@ namespace Nguyen_Khac_Minh_Quan
                         switch (Y)
                         {
                             case 2:
+                                myNumber.Clear();
                                 Reprint();
                                 break;
                             case 3:
@@ -209,7 +210,7 @@ namespace Nguyen_Khac_Minh_Quan
                                 break;
                             case 5:
                                 Ketqua();
-                                Thread.Sleep(1000);
+                                Thread.Sleep(500);
                                 Console.WriteLine("\nBam phim bat ky de quay tro lai menu");
                                 Console.ReadLine();
                                 Y = 2;
@@ -217,7 +218,7 @@ namespace Nguyen_Khac_Minh_Quan
                                 break;
                             case 6:
                                 Demo();
-                                Thread.Sleep(1000);
+                                Thread.Sleep(500);
                                 Console.WriteLine("\nBam phim bat ky de quay tro lai menu");
                                 Console.ReadLine();
                                 Y = 2;
@@ -247,24 +248,22 @@ namespace Nguyen_Khac_Minh_Quan
                     Console.WriteLine("Moi Nhap N vi tri {0}",i);
                     int t = int.Parse(Console.ReadLine());
                     myNumber.Add(t);
-            }
+                }
 
                 for (int i = 3; i == 0; i--)
-                    {
-                        
-                        Console.WriteLine("Screen will clear in {0}", i);
-                        Thread.Sleep(1000);
-                    }
-                    Console.CursorVisible = false;
-
-                    MenuOrginal();
+                {      
+                    Console.WriteLine("Screen will clear in {0}", i);
+                    Thread.Sleep(1000);
+                }
+                Console.CursorVisible = false;
+                MenuOrginal();
             }
             private static void Demo()
             {
                 int n = 7;
                 for (int k = 1; k <= n; k++)
                 {
-                    Thread.Sleep(1000);
+                    Thread.Sleep(800);
                     Console.Clear();
                     Console.WriteLine("\nHe thong bat dau sap xep lan {0}", k);
                     for (int j = 1; j < n; j++)
