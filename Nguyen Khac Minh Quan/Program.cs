@@ -60,8 +60,22 @@ namespace Nguyen_Khac_Minh_Quan
                 Console.WriteLine("6.Thoat");
                 Console.WriteLine("+---------+---------+");
             }
-
-            private static void ReadKeys()
+            private static void Menu4()
+            {
+                Console.SetCursorPosition(x, y);
+                Console.WriteLine("Menu:");
+                Console.WriteLine("+---------+---------+");
+                Console.WriteLine("1.Nhap lai day so");
+                Console.WriteLine("2.Sap xep tang dan");
+                Console.WriteLine("3.Sap xep giam dan");
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.WriteLine("4.In ket qua");
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.WriteLine("5.Demo sx tang dan");
+                Console.WriteLine("6.Thoat");
+                Console.WriteLine("+---------+---------+");
+            }
+        private static void ReadKeys()
             {
                 // điều hướng bằng mũi tên
                 ConsoleKeyInfo key = new ConsoleKeyInfo();
@@ -185,11 +199,12 @@ namespace Nguyen_Khac_Minh_Quan
                                     break;
                                 case 3:
                                     Sort();
-                                    MenuOrginal();
+                                    Menu4();
+                                    
                                     break;
                                 case 4:
                                     Reverse();
-                                    MenuOrginal();
+                                    Menu4();
                                     break;
                                 case 5:
                                     Ketqua();
@@ -201,7 +216,10 @@ namespace Nguyen_Khac_Minh_Quan
                                     Thread.Sleep(1000);
                                     MenuOrginal();
                                     break;
-                            }
+                                case 7:
+                                    System.Environment.Exit(0);
+                                    break;
+                        }
                             break;
                     }
                 }
