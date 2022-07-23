@@ -76,161 +76,161 @@ namespace Nguyen_Khac_Minh_Quan
                 Console.WriteLine("+---------+---------+");
             }
         private static void ReadKeys()
+        {
+            // điều hướng bằng mũi tên
+            ConsoleKeyInfo key = new ConsoleKeyInfo();
+            while (!Console.KeyAvailable && key.Key != ConsoleKey.Escape)
             {
-                // điều hướng bằng mũi tên
-                ConsoleKeyInfo key = new ConsoleKeyInfo();
-                while (!Console.KeyAvailable && key.Key != ConsoleKey.Escape)
+                key = Console.ReadKey(true);
+
+                switch (key.Key)
                 {
-                    key = Console.ReadKey(true);
-
-                    switch (key.Key)
-                    {
-                        case ConsoleKey.UpArrow:
-                            if (Y != 2)
+                    case ConsoleKey.UpArrow:
+                        if (Y != 2)
+                        {
+                            switch (Y)
                             {
-                                switch (Y)
-                                {
-                                    case 3:
-                                        Menu();
-                                        Y--;
-                                        Console.SetCursorPosition(x, Y);
-                                        Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("1.Nhap lai day so");
-                                        Console.BackgroundColor = ConsoleColor.Black;
-                                        break;
-                                    case 4:
-                                        Menu();
-                                        Y--;
-                                        Console.SetCursorPosition(x, Y);
-                                        Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("2.Sap xep tang dan");
-                                        Console.BackgroundColor = ConsoleColor.Black;
-                                        break;
-                                    case 5:
-                                        Menu();
-                                        Y--;
-                                        Console.SetCursorPosition(x, Y);
-                                        Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("3.Sap xep giam dan");
-                                        Console.BackgroundColor = ConsoleColor.Black;
-                                        break;
-                                    case 6:
-                                        Menu();
-                                        Y--;
-                                        Console.SetCursorPosition(x, Y);
-                                        Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("4.In ket qua");
-                                        Console.BackgroundColor = ConsoleColor.Black;
-                                        break;
-                                    case 7:
-                                        Menu();
-                                        Y--;
-                                        Console.SetCursorPosition(x, Y);
-                                        Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("5.Demo sx tang dan");
-                                        Console.BackgroundColor = ConsoleColor.Black;
-                                        break;
-                                    case 8:
-                                        Menu();
-                                        Y--;
-                                        Console.SetCursorPosition(x, Y);
-                                        Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("6.Thoat");
-                                        Console.BackgroundColor = ConsoleColor.Black;
-                                        break;
-                                }
+                                case 3:
+                                    Menu();
+                                    Y--;
+                                    Console.SetCursorPosition(x, Y);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("1.Nhap lai day so");
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    break;
+                                case 4:
+                                    Menu();
+                                    Y--;
+                                    Console.SetCursorPosition(x, Y);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("2.Sap xep tang dan");
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    break;
+                                case 5:
+                                    Menu();
+                                    Y--;
+                                    Console.SetCursorPosition(x, Y);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("3.Sap xep giam dan");
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    break;
+                                case 6:
+                                    Menu();
+                                    Y--;
+                                    Console.SetCursorPosition(x, Y);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("4.In ket qua");
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    break;
+                                case 7:
+                                    Menu();
+                                    Y--;
+                                    Console.SetCursorPosition(x, Y);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("5.Demo sx tang dan");
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    break;
+                                case 8:
+                                    Menu();
+                                    Y--;
+                                    Console.SetCursorPosition(x, Y);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("6.Thoat");
+                                    Console.BackgroundColor = ConsoleColor.Black;
+                                    break;
                             }
-                            break;
+                        }
+                        break;
 
-                        case ConsoleKey.DownArrow:
-                            if (Y != 7)
-                            {
-                                switch (Y)
-                                {
-                                    case 2:
-                                        Menu();
-                                        Y++;
-                                        Console.SetCursorPosition(x, Y);
-                                        Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("2.Sap xep tang dan");
-                                        Console.BackgroundColor = ConsoleColor.Black;
-                                        break;
-                                    case 3:
-                                        Menu();
-                                        Y++;
-                                        Console.SetCursorPosition(x, Y);
-                                        Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("3.Sap xep giam dan");
-                                        Console.BackgroundColor = ConsoleColor.Black;
-                                        break;
-                                    case 4:
-                                        Menu();
-                                        Y++;
-                                        Console.SetCursorPosition(x, Y);
-                                        Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("4.In ket qua");
-                                        Console.BackgroundColor = ConsoleColor.Black;
-                                        break;
-                                    case 5:
-                                        Menu();
-                                        Y++;
-                                        Console.SetCursorPosition(x, Y);
-                                        Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("5.Demo sx tang dan");
-                                        Console.BackgroundColor = ConsoleColor.Black;
-                                        break;
-                                    case 6:
-                                        Menu();
-                                        Y++;
-                                        Console.SetCursorPosition(x, Y);
-                                        Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("6.Thoat");
-                                        Console.BackgroundColor = ConsoleColor.Black;
-                                        break;
-                                }
-                            }
-                            break;
-                        // chọn chạy  lệnh bằng phím
-                        case ConsoleKey.Enter:
+                    case ConsoleKey.DownArrow:
+                        if (Y != 7)
+                        {
                             switch (Y)
                             {
                                 case 2:
-                                    Reprint();
+                                    Menu();
+                                    Y++;
+                                    Console.SetCursorPosition(x, Y);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("2.Sap xep tang dan");
+                                    Console.BackgroundColor = ConsoleColor.Black;
                                     break;
                                 case 3:
-                                    Sort();
-                                    Menu4();
-                                    Y = 5;
+                                    Menu();
+                                    Y++;
+                                    Console.SetCursorPosition(x, Y);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("3.Sap xep giam dan");
+                                    Console.BackgroundColor = ConsoleColor.Black;
                                     break;
                                 case 4:
-                                    Reverse();
-                                    Y = 5;
-                                    Menu4();
+                                    Menu();
+                                    Y++;
+                                    Console.SetCursorPosition(x, Y);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("4.In ket qua");
+                                    Console.BackgroundColor = ConsoleColor.Black;
                                     break;
                                 case 5:
-                                    Ketqua();
-                                    Thread.Sleep(1000);
-                                    Console.WriteLine("\nBam phim bat ky de quay tro lai menu");
-                                    Console.ReadLine();
-                                    Y = 2;
-                                    MenuOrginal();
+                                    Menu();
+                                    Y++;
+                                    Console.SetCursorPosition(x, Y);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("5.Demo sx tang dan");
+                                    Console.BackgroundColor = ConsoleColor.Black;
                                     break;
                                 case 6:
-                                    Demo();
-                                    Thread.Sleep(1000);
-                                    Console.WriteLine("\nBam phim bat ky de quay tro lai menu");
-                                    Console.ReadLine();
-                                    Y = 2;
-                                    MenuOrginal();
-                                    break;
-                                case 7:
-                                    System.Environment.Exit(0);
+                                    Menu();
+                                    Y++;
+                                    Console.SetCursorPosition(x, Y);
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("6.Thoat");
+                                    Console.BackgroundColor = ConsoleColor.Black;
                                     break;
                             }
-                            break;
+                        }
+                        break;
+                    // chọn chạy  lệnh bằng phím
+                    case ConsoleKey.Enter:
+                        switch (Y)
+                        {
+                            case 2:
+                                Reprint();
+                                break;
+                            case 3:
+                                Sort();
+                                Menu4();
+                                Y = 5;
+                                break;
+                            case 4:
+                                Reverse();
+                                Y = 5;
+                                Menu4();
+                                break;
+                            case 5:
+                                Ketqua();
+                                Thread.Sleep(1000);
+                                Console.WriteLine("\nBam phim bat ky de quay tro lai menu");
+                                Console.ReadLine();
+                                Y = 2;
+                                MenuOrginal();
+                                break;
+                            case 6:
+                                Demo();
+                                Thread.Sleep(1000);
+                                Console.WriteLine("\nBam phim bat ky de quay tro lai menu");
+                                Console.ReadLine();
+                                Y = 2;
+                                MenuOrginal();
+                                break;
+                            case 7:
+                                System.Environment.Exit(0);
+                                break;
+                        }
+                        break;
                     }
                 }
-            }
+        }
             private static int[] sorted = new int[12];
             private static void Reprint()
             {
