@@ -312,14 +312,6 @@ namespace Nguyen_Khac_Minh_Quan
                 myNumber.Sort();
                 myNumber.Reverse();    
             }
-        private static void Print()
-                {
-                    Console.SetCursorPosition(x + 16, Y);
-                    for (int i = 0; i < myNumber.Count; i++)
-                    {
-                        Console.Write(sorted[i] + " | ");
-                    }
-                }
-
-            }
-    }
+        
+     }
+}
