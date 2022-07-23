@@ -188,7 +188,13 @@ namespace Nguyen_Khac_Minh_Quan
                                     MenuOrginal();
                                     break;
                                 case 4:
-                                    Print();
+                                    Reverse();
+                                    MenuOrginal();
+                                    break;
+                                case 5:
+                                    Ketqua();
+                                    Thread.Sleep(1000);
+                                    MenuOrginal();
                                     break;
                                 case 6:
                                     Demo();
@@ -248,25 +254,33 @@ namespace Nguyen_Khac_Minh_Quan
 
                     }
                 }
-
-
             }
-        private static void Sort()
-        {
-            myNumber.Sort();
-
-
-        }
-        private static void Print()
+            private static void Ketqua()
             {
-                Console.SetCursorPosition(x + 16, Y);
-                for (int i = 0; i < myNumber.Count; i++)
+                int n = 7;
+                Console.Clear();
+                for (int i = 0; i <= n - 1; i++)
                 {
-                    Console.Write(sorted[i] + " | ");
+                        Console.Write("|{0}|", myNumber[i]);
                 }
+ 
             }
+            private static void Sort()
+            {
+                    myNumber.Sort();
+            }
+            private static void Reverse()
+            {
+                myNumber.Reverse();
+            }
+        private static void Print()
+                {
+                    Console.SetCursorPosition(x + 16, Y);
+                    for (int i = 0; i < myNumber.Count; i++)
+                    {
+                        Console.Write(sorted[i] + " | ");
+                    }
+                }
 
-        }
+            }
     }
-
-
