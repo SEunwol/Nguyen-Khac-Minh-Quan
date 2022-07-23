@@ -212,6 +212,7 @@ namespace Nguyen_Khac_Minh_Quan
                                     Thread.Sleep(1000);
                                     Console.WriteLine("\nBam phim bat ky de quay tro lai menu");
                                     Console.ReadLine();
+                                    Y = 2;
                                     MenuOrginal();
                                     break;
                                 case 6:
@@ -219,6 +220,7 @@ namespace Nguyen_Khac_Minh_Quan
                                     Thread.Sleep(1000);
                                     Console.WriteLine("\nBam phim bat ky de quay tro lai menu");
                                     Console.ReadLine();
+                                    Y = 2;
                                     MenuOrginal();
                                     break;
                                 case 7:
