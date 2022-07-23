@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Threading;
 using System.Threading.Tasks;
@@ -41,7 +41,7 @@ namespace Nguyen_Khac_Minh_Quan
                 Console.WriteLine("1.Nhap lai day so");
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.WriteLine("2.Sap xep tang dan");
-                Console.WriteLine("3.Sap xep tang dan");
+                Console.WriteLine("3.Sap xep giam dan");
                 Console.WriteLine("4.In ket qua");
                 Console.WriteLine("5.Demo sx tang dan");
                 Console.WriteLine("6.Thoat");
@@ -54,7 +54,7 @@ namespace Nguyen_Khac_Minh_Quan
                 Console.WriteLine("+---------+---------+");
                 Console.WriteLine("1.Nhap lai day so");
                 Console.WriteLine("2.Sap xep tang dan");
-                Console.WriteLine("3.Sap xep tang dan");
+                Console.WriteLine("3.Sap xep giam dan");
                 Console.WriteLine("4.In ket qua");
                 Console.WriteLine("5.Demo sx tang dan");
                 Console.WriteLine("6.Thoat");
@@ -97,7 +97,7 @@ namespace Nguyen_Khac_Minh_Quan
                                         Y--;
                                         Console.SetCursorPosition(x, Y);
                                         Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("3.Sap xep tang dan");
+                                        Console.WriteLine("3.Sap xep giam dan");
                                         Console.BackgroundColor = ConsoleColor.Black;
                                         break;
                                     case 6:
@@ -129,53 +129,45 @@ namespace Nguyen_Khac_Minh_Quan
                             break;
 
                         case ConsoleKey.DownArrow:
-                            if (Y != 4)
+                            if (Y != 7)
                             {
                                 switch (Y)
                                 {
                                     case 2:
                                         Menu();
-                                        Y--;
-                                        Console.SetCursorPosition(x, Y);
-                                        Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("1.Nhap lai day so");
-                                        Console.BackgroundColor = ConsoleColor.Black;
-                                        break;
-                                    case 3:
-                                        Menu();
-                                        Y--;
+                                        Y++;
                                         Console.SetCursorPosition(x, Y);
                                         Console.BackgroundColor = ConsoleColor.Red;
                                         Console.WriteLine("2.Sap xep tang dan");
                                         Console.BackgroundColor = ConsoleColor.Black;
                                         break;
-                                    case 4:
+                                    case 3:
                                         Menu();
-                                        Y--;
+                                        Y++;
                                         Console.SetCursorPosition(x, Y);
                                         Console.BackgroundColor = ConsoleColor.Red;
-                                        Console.WriteLine("3.Sap xep tang dan");
+                                        Console.WriteLine("3.Sap xep giam dan");
                                         Console.BackgroundColor = ConsoleColor.Black;
                                         break;
-                                    case 5:
+                                    case 4:
                                         Menu();
-                                        Y--;
+                                        Y++;
                                         Console.SetCursorPosition(x, Y);
                                         Console.BackgroundColor = ConsoleColor.Red;
                                         Console.WriteLine("4.In ket qua");
                                         Console.BackgroundColor = ConsoleColor.Black;
                                         break;
-                                    case 6:
+                                    case 5:
                                         Menu();
-                                        Y--;
+                                        Y++;
                                         Console.SetCursorPosition(x, Y);
                                         Console.BackgroundColor = ConsoleColor.Red;
                                         Console.WriteLine("5.Demo sx tang dan");
                                         Console.BackgroundColor = ConsoleColor.Black;
                                         break;
-                                    case 7:
+                                    case 6:
                                         Menu();
-                                        Y--;
+                                        Y++;
                                         Console.SetCursorPosition(x, Y);
                                         Console.BackgroundColor = ConsoleColor.Red;
                                         Console.WriteLine("6.Thoat");
@@ -193,9 +185,15 @@ namespace Nguyen_Khac_Minh_Quan
                                     break;
                                 case 3:
                                     Sort();
+                                    MenuOrginal();
                                     break;
                                 case 4:
                                     Print();
+                                    break;
+                                case 6:
+                                    Demo();
+                                    Thread.Sleep(1000);
+                                    MenuOrginal();
                                     break;
                             }
                             break;
@@ -255,24 +253,7 @@ namespace Nguyen_Khac_Minh_Quan
             }
         private static void Sort()
         {
-            int n = 7;
-            for (int k = 1; k <= n; k++)
-            {
-                Thread.Sleep(1000);
-                Console.Clear();
-                Console.WriteLine("\nHe thong bat dau sap xep lan {0}", k);
-                for (int j = 1; j < n; j++)
-                {
-                    myNumber.Sort(0, k, null);
-
-                }
-                for (int i = 0; i <= n - 1; i++)
-                {
-
-                    Console.Write("|{0}|", myNumber[i]);
-
-                }
-            }
+            myNumber.Sort();
 
 
         }
