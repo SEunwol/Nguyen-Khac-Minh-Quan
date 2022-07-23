@@ -200,26 +200,31 @@ namespace Nguyen_Khac_Minh_Quan
                                 case 3:
                                     Sort();
                                     Menu4();
-                                    
+                                    Y = 5;
                                     break;
                                 case 4:
                                     Reverse();
+                                    Y = 5;
                                     Menu4();
                                     break;
                                 case 5:
                                     Ketqua();
                                     Thread.Sleep(1000);
+                                    Console.WriteLine("\nBam phim bat ky de quay tro lai menu");
+                                    Console.ReadLine();
                                     MenuOrginal();
                                     break;
                                 case 6:
                                     Demo();
                                     Thread.Sleep(1000);
+                                    Console.WriteLine("\nBam phim bat ky de quay tro lai menu");
+                                    Console.ReadLine();
                                     MenuOrginal();
                                     break;
                                 case 7:
                                     System.Environment.Exit(0);
                                     break;
-                        }
+                            }
                             break;
                     }
                 }
@@ -265,31 +270,47 @@ namespace Nguyen_Khac_Minh_Quan
                         myNumber.Sort(0,k,null);
 
                     }
+                    Console.Write("+---+---+---+---+---+---+---+\n");
                     for (int i = 0; i <= n - 1; i++)
                     {
-
-                        Console.Write("|{0}|", myNumber[i]);
-
+                        if (i < 6)
+                        {
+                            Console.Write("| {0} ", myNumber[i]);
+                        }
+                        else if (i == 6)
+                        {
+                            Console.Write("| {0} |", myNumber[i]);
+                        }
                     }
+                    Console.Write("\n+---+---+---+---+---+---+---+");
                 }
             }
             private static void Ketqua()
             {
                 int n = 7;
                 Console.Clear();
+                Console.Write("+---+---+---+---+---+---+---+\n");
                 for (int i = 0; i <= n - 1; i++)
                 {
-                        Console.Write("|{0}|", myNumber[i]);
+                    if(i < 6)
+                    {
+                        Console.Write("| {0} ", myNumber[i]);
+                    }
+                    else if(i == 6)
+                    {
+                        Console.Write("| {0} |", myNumber[i]);
+                    }
                 }
- 
+                Console.Write("\n+---+---+---+---+---+---+---+");
             }
             private static void Sort()
             {
-                    myNumber.Sort();
+                myNumber.Sort();
             }
             private static void Reverse()
             {
-                myNumber.Reverse();
+                myNumber.Sort();
+                myNumber.Reverse();    
             }
         private static void Print()
                 {
